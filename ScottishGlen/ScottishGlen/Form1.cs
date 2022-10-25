@@ -23,6 +23,22 @@ namespace ScottishGlen
             connetionString = @"Data Source=tolmount.abertay.ac.uk;Initial Catalog=mssql2001125;User ID=mssql2001125;Password=Jz7BTyghaF";
             cnn = new SqlConnection(connetionString);
             cnn.Open();
+
+            SqlCommand command;
+            SqlDataReader dataReader;
+            String sql, Output = "";
+
+            sql = "SELECT * FROM assets";
+            command = new SqlCommand(sql, cnn);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + " - " + dataReader.GetValue(4) + "\n";
+            }
+
+            MessageBox.Show(Output);
+
             MessageBox.Show("Connection Open  !");
             cnn.Close();
         }
