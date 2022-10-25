@@ -29,13 +29,23 @@ namespace ScottishGlen
         /// </summary>
         private void InitializeComponent()
         {
+            this.displayData = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
+            // 
+            // displayData
+            // 
+            this.displayData.Location = new System.Drawing.Point(195, 55);
+            this.displayData.Name = "displayData";
+            this.displayData.Size = new System.Drawing.Size(377, 296);
+            this.displayData.TabIndex = 0;
+            this.displayData.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.displayData);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -44,6 +54,8 @@ namespace ScottishGlen
         }
 
         #endregion
+
+        private System.Windows.Forms.RichTextBox displayData;
     }
 }
 

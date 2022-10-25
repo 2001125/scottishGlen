@@ -35,6 +35,7 @@ namespace ScottishGlen
             while (dataReader.Read())
             {
                 Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + " - " + dataReader.GetValue(4) + " - " + dataReader.GetValue(5) + " - " + dataReader.GetValue(6) + " - " + dataReader.GetValue(7) + "\n";
+                displayData.Text = Output + "\n";
             }
 
             MessageBox.Show(Output);
