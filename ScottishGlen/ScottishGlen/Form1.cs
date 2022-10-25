@@ -16,6 +16,11 @@ namespace ScottishGlen
         public Form1()
         {
             InitializeComponent();
+            dbConnect();
+        }
+
+        void dbConnect()
+        {
             Console.WriteLine("Hello");
 
             string connetionString;
@@ -23,6 +28,8 @@ namespace ScottishGlen
             connetionString = @"Data Source=tolmount.abertay.ac.uk;Initial Catalog=mssql2001125;User ID=mssql2001125;Password=Jz7BTyghaF";
             cnn = new SqlConnection(connetionString);
             cnn.Open();
+
+            MessageBox.Show("Connection Open  !");
 
             SqlCommand command;
             SqlDataReader dataReader;
@@ -40,13 +47,34 @@ namespace ScottishGlen
 
             MessageBox.Show(Output);
 
-            MessageBox.Show("Connection Open  !");
             cnn.Close();
-        }
-
+        } 
+        
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void addDataButton_Click(object sender, EventArgs e)
+        {
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = @"Data Source=tolmount.abertay.ac.uk;Initial Catalog=mssql2001125;User ID=mssql2001125;Password=Jz7BTyghaF";
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+
+            SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            String sql="";
+
+            sql = "INSERT INTO assets VALUES('" + nameBox.Text + "', '" + modelBox.Text + "', '" + manufacturerBox.Text + "', '" + typeBox.Text + "', '" + ipBox.Text + "', '" + purchDateBox.Text + "', '" + noteBox.Text + "'); ";
+            command = new SqlCommand(sql, cnn);
+
+            adapter.InsertCommand = new SqlCommand(sql, cnn);
+            adapter.InsertCommand.ExecuteNonQuery();
+
+            command.Dispose();
+            cnn.Close();
         }
     }
 }
