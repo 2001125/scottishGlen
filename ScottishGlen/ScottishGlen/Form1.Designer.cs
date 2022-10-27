@@ -42,6 +42,7 @@ namespace ScottishGlen
             // 
             // displayData
             // 
+            this.displayData.Enabled = false;
             this.displayData.Location = new System.Drawing.Point(399, 69);
             this.displayData.Name = "displayData";
             this.displayData.Size = new System.Drawing.Size(377, 296);

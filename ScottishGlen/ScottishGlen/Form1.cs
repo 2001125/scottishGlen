@@ -29,7 +29,7 @@ namespace ScottishGlen
             cnn = new SqlConnection(connetionString);
             cnn.Open();
 
-            MessageBox.Show("Connection Open  !");
+            // MessageBox.Show("Connection Open  !");
 
             SqlCommand command;
             SqlDataReader dataReader;
@@ -45,10 +45,21 @@ namespace ScottishGlen
                 displayData.Text = Output + "\n";
             }
 
-            MessageBox.Show(Output);
+            // MessageBox.Show(Output);
 
             cnn.Close();
         } 
+
+        void clearTextBoxes()
+        {
+            nameBox.Clear();
+            modelBox.Clear();
+            manufacturerBox.Clear();
+            typeBox.Clear();
+            ipBox.Clear();
+            purchDateBox.Clear();
+            noteBox.Clear();
+        }
         
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -75,6 +86,9 @@ namespace ScottishGlen
 
             command.Dispose();
             cnn.Close();
+
+            clearTextBoxes();
+            dbConnect();
         }
     }
 }
