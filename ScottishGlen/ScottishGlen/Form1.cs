@@ -74,6 +74,7 @@ namespace ScottishGlen
             SqlDataAdapter adapter = new SqlDataAdapter();
             String sql="";
 
+            // inserting all the values from the text box to the database in an sql statement
             sql = "INSERT INTO assets VALUES('" + nameBox.Text + "', '" + modelBox.Text + "', '" + manufacturerBox.Text + "', '" + typeBox.Text + "', '" + ipBox.Text + "', '" + purchDateBox.Text + "', '" + noteBox.Text + "'); ";
             command = new SqlCommand(sql, cnn);
 
