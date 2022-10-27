@@ -66,9 +66,9 @@ namespace ScottishGlen
         {
             string connetionString;
             SqlConnection cnn;
-            connetionString = @"Data Source=tolmount.abertay.ac.uk;Initial Catalog=mssql2001125;User ID=mssql2001125;Password=Jz7BTyghaF";
-            cnn = new SqlConnection(connetionString);
-            cnn.Open();
+            connetionString = @"Data Source=tolmount.abertay.ac.uk;Initial Catalog=mssql2001125;User ID=mssql2001125;Password=Jz7BTyghaF"; // details to connect to the mssql db
+            cnn = new SqlConnection(connetionString); // initialise connection with the login details
+            cnn.Open(); // open connection 
 
             SqlCommand command;
             SqlDataAdapter adapter = new SqlDataAdapter();
@@ -76,13 +76,13 @@ namespace ScottishGlen
 
             // inserting all the values from the text box to the database in an sql statement
             sql = "INSERT INTO assets VALUES('" + nameBox.Text + "', '" + modelBox.Text + "', '" + manufacturerBox.Text + "', '" + typeBox.Text + "', '" + ipBox.Text + "', '" + purchDateBox.Text + "', '" + noteBox.Text + "'); ";
-            command = new SqlCommand(sql, cnn);
+            command = new SqlCommand(sql, cnn); // initialise the sql command
 
-            adapter.InsertCommand = new SqlCommand(sql, cnn);
-            adapter.InsertCommand.ExecuteNonQuery();
+            adapter.InsertCommand = new SqlCommand(sql, cnn); // start command
+            adapter.InsertCommand.ExecuteNonQuery(); // execute command
 
-            command.Dispose();
-            cnn.Close();
+            command.Dispose(); // dispose of the sql command
+            cnn.Close(); // close connection
 
             clearTextBoxes();
             dbConnect();
