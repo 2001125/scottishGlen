@@ -29,7 +29,6 @@ namespace ScottishGlen
         /// </summary>
         private void InitializeComponent()
         {
-            this.displayData = new System.Windows.Forms.RichTextBox();
             this.nameBox = new System.Windows.Forms.TextBox();
             this.modelBox = new System.Windows.Forms.TextBox();
             this.manufacturerBox = new System.Windows.Forms.TextBox();
@@ -38,16 +37,8 @@ namespace ScottishGlen
             this.purchDateBox = new System.Windows.Forms.TextBox();
             this.noteBox = new System.Windows.Forms.TextBox();
             this.addDataButton = new System.Windows.Forms.Button();
+            this.displayListData = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // displayData
-            // 
-            this.displayData.Enabled = false;
-            this.displayData.Location = new System.Drawing.Point(399, 69);
-            this.displayData.Name = "displayData";
-            this.displayData.Size = new System.Drawing.Size(377, 296);
-            this.displayData.TabIndex = 0;
-            this.displayData.Text = "";
             // 
             // nameBox
             // 
@@ -108,11 +99,20 @@ namespace ScottishGlen
             this.addDataButton.UseVisualStyleBackColor = true;
             this.addDataButton.Click += new System.EventHandler(this.addDataButton_Click);
             // 
+            // displayListData
+            // 
+            this.displayListData.FormattingEnabled = true;
+            this.displayListData.Location = new System.Drawing.Point(247, 69);
+            this.displayListData.Name = "displayListData";
+            this.displayListData.Size = new System.Drawing.Size(506, 290);
+            this.displayListData.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.displayListData);
             this.Controls.Add(this.addDataButton);
             this.Controls.Add(this.noteBox);
             this.Controls.Add(this.purchDateBox);
@@ -121,7 +121,6 @@ namespace ScottishGlen
             this.Controls.Add(this.manufacturerBox);
             this.Controls.Add(this.modelBox);
             this.Controls.Add(this.nameBox);
-            this.Controls.Add(this.displayData);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -131,8 +130,6 @@ namespace ScottishGlen
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox displayData;
         private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.TextBox modelBox;
         private System.Windows.Forms.TextBox manufacturerBox;
@@ -141,6 +138,7 @@ namespace ScottishGlen
         private System.Windows.Forms.TextBox purchDateBox;
         private System.Windows.Forms.TextBox noteBox;
         private System.Windows.Forms.Button addDataButton;
+        private System.Windows.Forms.ListBox displayListData;
     }
 }
 
