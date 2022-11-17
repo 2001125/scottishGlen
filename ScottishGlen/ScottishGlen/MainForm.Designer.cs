@@ -95,7 +95,7 @@ namespace ScottishGlen
             this.Controls.Add(this.toAdd);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MainForm";
-            this.Text = "Form2";
+            this.Text = "ScottishGlen";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

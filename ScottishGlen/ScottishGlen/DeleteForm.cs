@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace ScottishGlen
 {
-    public partial class MainForm : Form
+    public partial class DeleteForm : Form
     {
-        public MainForm()
+        public DeleteForm()
         {
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void toAdd_Click(object sender, EventArgs e)
-        {
-            AddForm addForm = new AddForm();
-            addForm.Show();
         }
     }
 }

@@ -177,7 +177,7 @@ namespace ScottishGlen
             this.notesLabel.TabIndex = 16;
             this.notesLabel.Text = "Notes";
             // 
-            // Form1
+            // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,8 +198,8 @@ namespace ScottishGlen
             this.Controls.Add(this.manufacturerBox);
             this.Controls.Add(this.modelBox);
             this.Controls.Add(this.nameBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "AddForm";
+            this.Text = "Add";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
