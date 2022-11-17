@@ -45,6 +45,7 @@ namespace ScottishGlen
             this.ipLabel = new System.Windows.Forms.Label();
             this.purchDateLabel = new System.Windows.Forms.Label();
             this.notesLabel = new System.Windows.Forms.Label();
+            this.scanSys = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameBox
@@ -98,9 +99,9 @@ namespace ScottishGlen
             // 
             // addDataButton
             // 
-            this.addDataButton.Location = new System.Drawing.Point(75, 338);
+            this.addDataButton.Location = new System.Drawing.Point(63, 316);
             this.addDataButton.Name = "addDataButton";
-            this.addDataButton.Size = new System.Drawing.Size(75, 23);
+            this.addDataButton.Size = new System.Drawing.Size(99, 31);
             this.addDataButton.TabIndex = 8;
             this.addDataButton.Text = "Submit";
             this.addDataButton.UseVisualStyleBackColor = true;
@@ -177,11 +178,22 @@ namespace ScottishGlen
             this.notesLabel.TabIndex = 16;
             this.notesLabel.Text = "Notes";
             // 
+            // scanSys
+            // 
+            this.scanSys.Location = new System.Drawing.Point(63, 389);
+            this.scanSys.Name = "scanSys";
+            this.scanSys.Size = new System.Drawing.Size(99, 31);
+            this.scanSys.TabIndex = 17;
+            this.scanSys.Text = "Scan System";
+            this.scanSys.UseVisualStyleBackColor = true;
+            this.scanSys.Click += new System.EventHandler(this.scanSys_Click);
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.scanSys);
             this.Controls.Add(this.notesLabel);
             this.Controls.Add(this.purchDateLabel);
             this.Controls.Add(this.ipLabel);
@@ -223,6 +235,7 @@ namespace ScottishGlen
         private System.Windows.Forms.Label ipLabel;
         private System.Windows.Forms.Label purchDateLabel;
         private System.Windows.Forms.Label notesLabel;
+        private System.Windows.Forms.Button scanSys;
     }
 }
 
