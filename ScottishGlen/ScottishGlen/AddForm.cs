@@ -119,7 +119,7 @@ namespace ScottishGlen
 
             string manufacturer = GetManufacturer();
 
-            MessageBox.Show("Computer Name: " + sysName + "\nIP Address: " + IP + "\nManufacturer: " + manufacturer);
+            MessageBox.Show("Computer Name: " + currentSysName.Text + "\nModel" + sysName + "\nIP Address: " + IP + "\nManufacturer: " + manufacturer + "\nType: PC");
         }
     } // Form1 Class
 }

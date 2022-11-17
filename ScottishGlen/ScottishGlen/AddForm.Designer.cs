@@ -46,6 +46,8 @@ namespace ScottishGlen
             this.purchDateLabel = new System.Windows.Forms.Label();
             this.notesLabel = new System.Windows.Forms.Label();
             this.scanSys = new System.Windows.Forms.Button();
+            this.currentSysName = new System.Windows.Forms.TextBox();
+            this.currentName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nameBox
@@ -180,7 +182,7 @@ namespace ScottishGlen
             // 
             // scanSys
             // 
-            this.scanSys.Location = new System.Drawing.Point(63, 389);
+            this.scanSys.Location = new System.Drawing.Point(63, 407);
             this.scanSys.Name = "scanSys";
             this.scanSys.Size = new System.Drawing.Size(99, 31);
             this.scanSys.TabIndex = 17;
@@ -188,11 +190,29 @@ namespace ScottishGlen
             this.scanSys.UseVisualStyleBackColor = true;
             this.scanSys.Click += new System.EventHandler(this.scanSys_Click);
             // 
+            // currentSysName
+            // 
+            this.currentSysName.Location = new System.Drawing.Point(62, 381);
+            this.currentSysName.Name = "currentSysName";
+            this.currentSysName.Size = new System.Drawing.Size(100, 20);
+            this.currentSysName.TabIndex = 18;
+            // 
+            // currentName
+            // 
+            this.currentName.AutoSize = true;
+            this.currentName.Location = new System.Drawing.Point(58, 365);
+            this.currentName.Name = "currentName";
+            this.currentName.Size = new System.Drawing.Size(72, 13);
+            this.currentName.TabIndex = 19;
+            this.currentName.Text = "System Name";
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.currentName);
+            this.Controls.Add(this.currentSysName);
             this.Controls.Add(this.scanSys);
             this.Controls.Add(this.notesLabel);
             this.Controls.Add(this.purchDateLabel);
@@ -236,6 +256,8 @@ namespace ScottishGlen
         private System.Windows.Forms.Label purchDateLabel;
         private System.Windows.Forms.Label notesLabel;
         private System.Windows.Forms.Button scanSys;
+        private System.Windows.Forms.TextBox currentSysName;
+        private System.Windows.Forms.Label currentName;
     }
 }
 
