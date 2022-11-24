@@ -16,7 +16,17 @@ namespace ScottishGlen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            //Application.Run(new LoginForm());
+
+            DialogResult result;
+
+            using (var LoginForm = new LoginForm())
+                result = LoginForm.ShowDialog();
+
+            if (result == DialogResult.OK) // check if the login was succesful
+            {
+                Application.Run(new MainForm()); // run the main form
+            }
         }
     }
 }

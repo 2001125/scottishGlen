@@ -36,6 +36,8 @@ namespace ScottishGlen
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.submitButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.incorrectDetailsLabel = new System.Windows.Forms.Label();
+            this.showPasswordCheck = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // loginInfo
@@ -50,7 +52,7 @@ namespace ScottishGlen
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(13, 74);
+            this.usernameLabel.Location = new System.Drawing.Point(13, 53);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(58, 13);
             this.usernameLabel.TabIndex = 1;
@@ -59,7 +61,7 @@ namespace ScottishGlen
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(13, 106);
+            this.passwordLabel.Location = new System.Drawing.Point(15, 89);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(56, 13);
             this.passwordLabel.TabIndex = 2;
@@ -67,41 +69,68 @@ namespace ScottishGlen
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(89, 71);
+            this.usernameTextBox.Location = new System.Drawing.Point(89, 53);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(171, 20);
             this.usernameTextBox.TabIndex = 3;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(89, 106);
+            this.passwordTextBox.Location = new System.Drawing.Point(89, 89);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(171, 20);
             this.passwordTextBox.TabIndex = 4;
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(89, 165);
+            this.submitButton.Location = new System.Drawing.Point(89, 171);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 5;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(185, 165);
+            this.exitButton.Location = new System.Drawing.Point(185, 171);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 6;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // incorrectDetailsLabel
+            // 
+            this.incorrectDetailsLabel.AutoSize = true;
+            this.incorrectDetailsLabel.ForeColor = System.Drawing.Color.Red;
+            this.incorrectDetailsLabel.Location = new System.Drawing.Point(91, 141);
+            this.incorrectDetailsLabel.Name = "incorrectDetailsLabel";
+            this.incorrectDetailsLabel.Size = new System.Drawing.Size(169, 13);
+            this.incorrectDetailsLabel.TabIndex = 7;
+            this.incorrectDetailsLabel.Text = "Username or password is incorrect";
+            this.incorrectDetailsLabel.Visible = false;
+            // 
+            // showPasswordCheck
+            // 
+            this.showPasswordCheck.AutoSize = true;
+            this.showPasswordCheck.Location = new System.Drawing.Point(158, 115);
+            this.showPasswordCheck.Name = "showPasswordCheck";
+            this.showPasswordCheck.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.showPasswordCheck.Size = new System.Drawing.Size(102, 17);
+            this.showPasswordCheck.TabIndex = 9;
+            this.showPasswordCheck.Text = "Show Password";
+            this.showPasswordCheck.UseVisualStyleBackColor = true;
+            this.showPasswordCheck.CheckedChanged += new System.EventHandler(this.showPasswordCheck_CheckedChanged);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 217);
+            this.ClientSize = new System.Drawing.Size(288, 227);
+            this.Controls.Add(this.showPasswordCheck);
+            this.Controls.Add(this.incorrectDetailsLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.passwordTextBox);
@@ -109,8 +138,11 @@ namespace ScottishGlen
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.loginInfo);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,5 +157,7 @@ namespace ScottishGlen
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Label incorrectDetailsLabel;
+        private System.Windows.Forms.CheckBox showPasswordCheck;
     }
 }
