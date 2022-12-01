@@ -151,5 +151,10 @@ namespace ScottishGlen
                 dbConnect(); // refresh the list box
             }
         }
+
+        private void displayListData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     } // Form1 Class
 }

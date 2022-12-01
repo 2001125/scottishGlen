@@ -116,6 +116,7 @@ namespace ScottishGlen
             this.displayListData.Name = "displayListData";
             this.displayListData.Size = new System.Drawing.Size(506, 381);
             this.displayListData.TabIndex = 9;
+            this.displayListData.SelectedIndexChanged += new System.EventHandler(this.displayListData_SelectedIndexChanged);
             // 
             // nameLabel
             // 
@@ -206,7 +207,7 @@ namespace ScottishGlen
             this.currentName.TabIndex = 19;
             this.currentName.Text = "System Name";
             // 
-            // AddForm
+            // hardwareAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -230,7 +231,7 @@ namespace ScottishGlen
             this.Controls.Add(this.manufacturerBox);
             this.Controls.Add(this.modelBox);
             this.Controls.Add(this.nameBox);
-            this.Name = "AddForm";
+            this.Name = "hardwareAddForm";
             this.Text = "Add";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
