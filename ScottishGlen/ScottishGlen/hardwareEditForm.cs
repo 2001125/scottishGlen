@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ScottishGlen
 {
-    public partial class ViewForm : Form
+    public partial class hardwareEditForm : Form
     {
-        public ViewForm()
+        public hardwareEditForm()
         {
             InitializeComponent();
         }
 
-        private void ViewForm_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

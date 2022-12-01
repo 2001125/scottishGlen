@@ -1,7 +1,7 @@
 ﻿
 namespace ScottishGlen
 {
-    partial class DeleteForm
+    partial class hardwareViewForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,14 @@ namespace ScottishGlen
         {
             this.SuspendLayout();
             // 
-            // DeleteForm
+            // ViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "DeleteForm";
-            this.Text = "Delete";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "ViewForm";
+            this.Text = "View";
+            this.Load += new System.EventHandler(this.ViewForm_Load);
             this.ResumeLayout(false);
 
         }

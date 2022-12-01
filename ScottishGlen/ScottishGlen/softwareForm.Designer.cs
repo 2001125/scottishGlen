@@ -1,7 +1,7 @@
 ﻿
 namespace ScottishGlen
 {
-    partial class ViewForm
+    partial class softwareForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,13 @@ namespace ScottishGlen
         {
             this.SuspendLayout();
             // 
-            // ViewForm
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "ViewForm";
-            this.Text = "View";
-            this.Load += new System.EventHandler(this.ViewForm_Load);
+            this.Name = "Form1";
+            this.Text = "ScottishGlen - Software";
             this.ResumeLayout(false);
 
         }

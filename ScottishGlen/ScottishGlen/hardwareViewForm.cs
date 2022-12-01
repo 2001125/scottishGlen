@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace ScottishGlen
 {
-    public partial class hardwareForm : Form
+    public partial class hardwareViewForm : Form
     {
-        public hardwareForm()
+        public hardwareViewForm()
         {
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void ViewForm_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void toAdd_Click(object sender, EventArgs e)
-        {
-            hardwareAddForm addForm = new hardwareAddForm();
-            addForm.Show();
         }
     }
 }

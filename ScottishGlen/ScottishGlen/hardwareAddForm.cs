@@ -13,9 +13,9 @@ using System.Management;
 
 namespace ScottishGlen
 {
-    public partial class AddForm : Form
+    public partial class hardwareAddForm : Form
     {
-        public AddForm()
+        public hardwareAddForm()
         {
             InitializeComponent();
             dbConnect(); // runs this to immediately display the records on the progam loading

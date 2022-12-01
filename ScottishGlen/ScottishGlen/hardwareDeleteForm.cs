@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ScottishGlen
 {
-    public partial class DeleteForm : Form
+    public partial class hardwareDeleteForm : Form
     {
-        public DeleteForm()
+        public hardwareDeleteForm()
         {
             InitializeComponent();
         }

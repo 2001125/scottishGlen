@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ScottishGlen
 {
-    public partial class EditForm : Form
+    public partial class softwareForm : Form
     {
-        public EditForm()
+        public softwareForm()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

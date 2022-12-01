@@ -1,7 +1,7 @@
 ﻿
 namespace ScottishGlen
 {
-    partial class AddForm
+    partial class hardwareAddForm
     {
         /// <summary>
         /// Required designer variable.

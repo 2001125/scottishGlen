@@ -95,7 +95,7 @@ namespace ScottishGlen
             this.hardwareLabel.TabIndex = 5;
             this.hardwareLabel.Text = "Hardware";
             // 
-            // MainForm
+            // hardwareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,8 +106,8 @@ namespace ScottishGlen
             this.Controls.Add(this.toView);
             this.Controls.Add(this.toAdd);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "MainForm";
-            this.Text = "ScottishGlen";
+            this.Name = "hardwareForm";
+            this.Text = "ScottishGlen - Hardware";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
