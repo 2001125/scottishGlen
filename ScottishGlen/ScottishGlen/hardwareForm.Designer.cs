@@ -66,6 +66,7 @@ namespace ScottishGlen
             this.toView.TabIndex = 2;
             this.toView.Text = "View";
             this.toView.UseVisualStyleBackColor = true;
+            this.toView.Click += new System.EventHandler(this.toView_Click);
             // 
             // toEdit
             // 
@@ -75,6 +76,7 @@ namespace ScottishGlen
             this.toEdit.TabIndex = 3;
             this.toEdit.Text = "Edit";
             this.toEdit.UseVisualStyleBackColor = true;
+            this.toEdit.Click += new System.EventHandler(this.toEdit_Click);
             // 
             // toDelete
             // 
@@ -84,6 +86,7 @@ namespace ScottishGlen
             this.toDelete.TabIndex = 4;
             this.toDelete.Text = "Delete";
             this.toDelete.UseVisualStyleBackColor = true;
+            this.toDelete.Click += new System.EventHandler(this.toDelete_Click);
             // 
             // hardwareLabel
             // 

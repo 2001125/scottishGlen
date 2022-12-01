@@ -27,5 +27,23 @@ namespace ScottishGlen
             hardwareAddForm addForm = new hardwareAddForm();
             addForm.Show();
         }
+
+        private void toView_Click(object sender, EventArgs e)
+        {
+            hardwareViewForm viewForm = new hardwareViewForm();
+            viewForm.Show();
+        }
+
+        private void toDelete_Click(object sender, EventArgs e)
+        {
+            hardwareDeleteForm deleteForm = new hardwareDeleteForm();
+            deleteForm.Show();
+        }
+
+        private void toEdit_Click(object sender, EventArgs e)
+        {
+            hardwareEditForm editForm = new hardwareEditForm();
+            editForm.Show();
+        }
     }
 }

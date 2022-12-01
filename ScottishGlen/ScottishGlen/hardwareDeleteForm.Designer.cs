@@ -29,14 +29,36 @@ namespace ScottishGlen
         /// </summary>
         private void InitializeComponent()
         {
+            this.deleteList = new System.Windows.Forms.ListBox();
+            this.deleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // DeleteForm
+            // deleteList
+            // 
+            this.deleteList.FormattingEnabled = true;
+            this.deleteList.Location = new System.Drawing.Point(65, 40);
+            this.deleteList.Name = "deleteList";
+            this.deleteList.Size = new System.Drawing.Size(672, 303);
+            this.deleteList.TabIndex = 0;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(335, 349);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(133, 56);
+            this.deleteButton.TabIndex = 1;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // hardwareDeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "DeleteForm";
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.deleteList);
+            this.Name = "hardwareDeleteForm";
             this.Text = "Delete";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -44,5 +66,8 @@ namespace ScottishGlen
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox deleteList;
+        private System.Windows.Forms.Button deleteButton;
     }
 }

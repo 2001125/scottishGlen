@@ -116,10 +116,40 @@ namespace ScottishGlen
         {
             string sysName = Environment.MachineName; // get the machines name for model
             string IP = Dns.GetHostByName(sysName).AddressList[0].ToString(); // get the ip address
+            string compName = currentSysName.Text;
 
             string manufacturer = GetManufacturer();
 
-            MessageBox.Show("Computer Name: " + currentSysName.Text + "\nModel: " + sysName + "\nIP Address: " + IP + "\nManufacturer: " + manufacturer + "\nType: PC");
+            //MessageBox.Show("Computer Name: " + compName + "\nModel: " + sysName + "\nIP Address: " + IP + "\nManufacturer: " + manufacturer + "\nType: PC");
+
+            if (currentSysName.Text == "") // ensures the scan will have a name
+            {
+                MessageBox.Show("Please enter a name for the system!"); // error message if name is missing
+            }
+            else
+            {
+                string connetionString;
+                SqlConnection cnn;
+                connetionString = @"Data Source=tolmount.abertay.ac.uk;Initial Catalog=mssql2001125;User ID=mssql2001125;Password=Jz7BTyghaF"; // details to connect to the mssql db
+                cnn = new SqlConnection(connetionString); // initialise connection with the login details
+                cnn.Open(); // open connection 
+
+                SqlCommand command;
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                String sql = "";
+
+                // inserting all the values from the text box to the database in an sql statement
+                sql = "INSERT INTO assets VALUES('" + compName + "', '" + sysName + "', '" + manufacturer + "', 'PC', '" + IP + "', '', ''); ";
+                command = new SqlCommand(sql, cnn); // initialise the sql command
+
+                adapter.InsertCommand = new SqlCommand(sql, cnn); // start command
+                adapter.InsertCommand.ExecuteNonQuery(); // execute command
+
+                command.Dispose(); // dispose of the sql command
+                cnn.Close(); // close connection
+
+                dbConnect(); // refresh the list box
+            }
         }
     } // Form1 Class
 }
