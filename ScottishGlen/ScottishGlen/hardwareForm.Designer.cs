@@ -1,7 +1,7 @@
 ﻿
 namespace ScottishGlen
 {
-    partial class MainForm
+    partial class hardwareForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,13 @@ namespace ScottishGlen
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hardwareForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toAdd = new System.Windows.Forms.Button();
             this.toView = new System.Windows.Forms.Button();
             this.toEdit = new System.Windows.Forms.Button();
             this.toDelete = new System.Windows.Forms.Button();
+            this.hardwareLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +85,22 @@ namespace ScottishGlen
             this.toDelete.Text = "Delete";
             this.toDelete.UseVisualStyleBackColor = true;
             // 
+            // hardwareLabel
+            // 
+            this.hardwareLabel.AutoSize = true;
+            this.hardwareLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hardwareLabel.Location = new System.Drawing.Point(342, 132);
+            this.hardwareLabel.Name = "hardwareLabel";
+            this.hardwareLabel.Size = new System.Drawing.Size(104, 25);
+            this.hardwareLabel.TabIndex = 5;
+            this.hardwareLabel.Text = "Hardware";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.hardwareLabel);
             this.Controls.Add(this.toDelete);
             this.Controls.Add(this.toEdit);
             this.Controls.Add(this.toView);
@@ -99,6 +111,7 @@ namespace ScottishGlen
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,5 +122,6 @@ namespace ScottishGlen
         private System.Windows.Forms.Button toView;
         private System.Windows.Forms.Button toEdit;
         private System.Windows.Forms.Button toDelete;
+        private System.Windows.Forms.Label hardwareLabel;
     }
 }

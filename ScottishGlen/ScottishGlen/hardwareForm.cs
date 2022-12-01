@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ScottishGlen
 {
-    public partial class MainForm : Form
+    public partial class hardwareForm : Form
     {
-        public MainForm()
+        public hardwareForm()
         {
             InitializeComponent();
         }

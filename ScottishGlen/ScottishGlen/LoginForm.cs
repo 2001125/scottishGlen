@@ -10,12 +10,13 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Net; //Include this namespace
 using System.Management;
+using BCrypt.Net;
 
 
 namespace ScottishGlen
 {
     public partial class LoginForm : Form
-    {
+    {         
         public LoginForm()
         {
             InitializeComponent();
@@ -60,7 +61,7 @@ namespace ScottishGlen
             {
                 while (dataReader.Read()) // loops through the records of the database
                 {
-                    if (passwordTextBox.Text == dataReader.GetValue(2).ToString()) // checks if the password is correct
+                    if (BCrypt.Net.BCrypt.Verify(passwordTextBox.Text, dataReader.GetString(2))) // checks if the password is correct
                     {
                         DialogResult = DialogResult.OK; // loads the main form
                     }

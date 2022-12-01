@@ -25,7 +25,7 @@ namespace ScottishGlen
 
             if (result == DialogResult.OK) // check if the login was succesful
             {
-                Application.Run(new MainForm()); // run the main form
+                Application.Run(new hardwareForm()); // run the main form
             }
         }
     }
