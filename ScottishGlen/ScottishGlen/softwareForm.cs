@@ -26,7 +26,7 @@ namespace ScottishGlen
             // for adding, don't allow manual add just scan system
             // two tables (probably listboxes), one for the software and then when one is selected the other box shows the hardware using it
             // have field in hardware database with foreign key showing what os it is using
-            string test; 
+            string test;
         }
     }
 }
