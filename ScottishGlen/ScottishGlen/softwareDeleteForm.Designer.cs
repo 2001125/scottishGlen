@@ -38,6 +38,7 @@ namespace ScottishGlen
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "softwareDeleteForm";
             this.Text = "Delete";
+            this.Load += new System.EventHandler(this.softwareDeleteForm_Load);
             this.ResumeLayout(false);
 
         }

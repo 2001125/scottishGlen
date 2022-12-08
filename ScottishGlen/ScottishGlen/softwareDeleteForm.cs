@@ -16,5 +16,15 @@ namespace ScottishGlen
         {
             InitializeComponent();
         }
+
+        private void softwareDeleteForm_Load(object sender, EventArgs e)
+        {
+            // FOR LINKING THE TABLES
+            // have linking table with hardware name and software name
+            // new form that has both hardware and software name
+            // select from both boxes and click link
+            // takes both names and adds to link table
+            // also views them by getting link table data
+        }
     }
 }
