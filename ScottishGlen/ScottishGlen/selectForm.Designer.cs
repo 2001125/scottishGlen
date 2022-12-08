@@ -34,6 +34,7 @@ namespace ScottishGlen
             this.hardwareButton = new System.Windows.Forms.Button();
             this.softwareButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.linkButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,43 +49,60 @@ namespace ScottishGlen
             // 
             // hardwareButton
             // 
-            this.hardwareButton.Location = new System.Drawing.Point(157, 198);
+            this.hardwareButton.BackColor = System.Drawing.Color.OliveDrab;
+            this.hardwareButton.Location = new System.Drawing.Point(53, 198);
             this.hardwareButton.Name = "hardwareButton";
             this.hardwareButton.Size = new System.Drawing.Size(227, 111);
             this.hardwareButton.TabIndex = 2;
             this.hardwareButton.Text = "Hardware";
-            this.hardwareButton.UseVisualStyleBackColor = true;
+            this.hardwareButton.UseVisualStyleBackColor = false;
             this.hardwareButton.Click += new System.EventHandler(this.hardwareButton_Click);
             // 
             // softwareButton
             // 
-            this.softwareButton.Location = new System.Drawing.Point(430, 198);
+            this.softwareButton.BackColor = System.Drawing.Color.OliveDrab;
+            this.softwareButton.Location = new System.Drawing.Point(512, 198);
             this.softwareButton.Name = "softwareButton";
-            this.softwareButton.Size = new System.Drawing.Size(227, 111);
+            this.softwareButton.Size = new System.Drawing.Size(220, 111);
             this.softwareButton.TabIndex = 3;
             this.softwareButton.Text = "Software";
-            this.softwareButton.UseVisualStyleBackColor = true;
+            this.softwareButton.UseVisualStyleBackColor = false;
             this.softwareButton.Click += new System.EventHandler(this.softwareButton_Click);
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(352, 345);
+            this.exitButton.BackColor = System.Drawing.Color.OliveDrab;
+            this.exitButton.Location = new System.Drawing.Point(340, 349);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(109, 42);
             this.exitButton.TabIndex = 4;
             this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // linkButton
+            // 
+            this.linkButton.BackColor = System.Drawing.Color.OliveDrab;
+            this.linkButton.Location = new System.Drawing.Point(286, 198);
+            this.linkButton.Name = "linkButton";
+            this.linkButton.Size = new System.Drawing.Size(220, 111);
+            this.linkButton.TabIndex = 5;
+            this.linkButton.Text = "Links";
+            this.linkButton.UseVisualStyleBackColor = false;
+            this.linkButton.Click += new System.EventHandler(this.linkButton_Click);
             // 
             // selectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.softwareButton);
             this.Controls.Add(this.hardwareButton);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "selectForm";
             this.Text = "Select";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -98,5 +116,6 @@ namespace ScottishGlen
         private System.Windows.Forms.Button hardwareButton;
         private System.Windows.Forms.Button softwareButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button linkButton;
     }
 }

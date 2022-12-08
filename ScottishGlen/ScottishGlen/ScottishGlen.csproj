@@ -63,6 +63,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="linkAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linkAddForm.Designer.cs">
+      <DependentUpon>linkAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="linkViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linkViewForm.Designer.cs">
+      <DependentUpon>linkViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="softwareViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +159,9 @@
     <EmbeddedResource Include="hardwareDeleteForm.resx">
       <DependentUpon>hardwareDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="linkAddForm.resx">
+      <DependentUpon>linkAddForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="softwareForm.resx">
       <DependentUpon>softwareForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +197,9 @@
     </Compile>
     <EmbeddedResource Include="softwareViewForm.resx">
       <DependentUpon>softwareViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="linkViewForm.resx">
+      <DependentUpon>linkViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

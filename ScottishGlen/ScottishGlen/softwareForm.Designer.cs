@@ -35,6 +35,7 @@ namespace ScottishGlen
             this.toView = new System.Windows.Forms.Button();
             this.toAdd = new System.Windows.Forms.Button();
             this.toEdit = new System.Windows.Forms.Button();
+            this.toDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,11 +88,22 @@ namespace ScottishGlen
             this.toEdit.UseVisualStyleBackColor = true;
             this.toEdit.Click += new System.EventHandler(this.toEdit_Click);
             // 
+            // toDelete
+            // 
+            this.toDelete.Location = new System.Drawing.Point(440, 289);
+            this.toDelete.Name = "toDelete";
+            this.toDelete.Size = new System.Drawing.Size(152, 44);
+            this.toDelete.TabIndex = 11;
+            this.toDelete.Text = "Delete";
+            this.toDelete.UseVisualStyleBackColor = true;
+            this.toDelete.Click += new System.EventHandler(this.toDelete_Click);
+            // 
             // softwareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toDelete);
             this.Controls.Add(this.toEdit);
             this.Controls.Add(this.toAdd);
             this.Controls.Add(this.toView);
@@ -112,5 +124,6 @@ namespace ScottishGlen
         private System.Windows.Forms.Button toView;
         private System.Windows.Forms.Button toAdd;
         private System.Windows.Forms.Button toEdit;
+        private System.Windows.Forms.Button toDelete;
     }
 }

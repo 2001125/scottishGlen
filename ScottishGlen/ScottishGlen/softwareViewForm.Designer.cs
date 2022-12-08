@@ -36,9 +36,9 @@ namespace ScottishGlen
             // viewSoftwareGrid
             // 
             this.viewSoftwareGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.viewSoftwareGrid.Location = new System.Drawing.Point(159, 71);
+            this.viewSoftwareGrid.Location = new System.Drawing.Point(100, 48);
             this.viewSoftwareGrid.Name = "viewSoftwareGrid";
-            this.viewSoftwareGrid.Size = new System.Drawing.Size(448, 292);
+            this.viewSoftwareGrid.Size = new System.Drawing.Size(575, 356);
             this.viewSoftwareGrid.TabIndex = 1;
             // 
             // softwareViewForm

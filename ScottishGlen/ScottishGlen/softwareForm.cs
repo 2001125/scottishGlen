@@ -34,5 +34,11 @@ namespace ScottishGlen
             softwareEditForm editForm = new softwareEditForm();
             editForm.Show();
         }
+
+        private void toDelete_Click(object sender, EventArgs e)
+        {
+            softwareDeleteForm deleteForm = new softwareDeleteForm();
+            deleteForm.Show();
+        }
     }
 }

@@ -65,6 +65,11 @@ namespace ScottishGlen
                     {
                         DialogResult = DialogResult.OK; // loads the main form
                     }
+                    else
+                    {
+                        incorrectDetailsLabel.Text = "Username or password is incorrect!"; // displays error message if details are incorrect
+                        incorrectDetailsLabel.Visible = true;
+                    }
                 }
             }
             else

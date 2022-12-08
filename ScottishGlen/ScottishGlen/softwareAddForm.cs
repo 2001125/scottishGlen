@@ -122,5 +122,10 @@ namespace ScottishGlen
 
             dbConnect(); // refresh the list box
         }
+
+        private void softwareAddForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

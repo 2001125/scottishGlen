@@ -33,5 +33,11 @@ namespace ScottishGlen
         {
             Application.Exit();
         }
+
+        private void linkButton_Click(object sender, EventArgs e)
+        {
+            linkViewForm linkViewForm = new linkViewForm();
+            linkViewForm.Show();
+        }
     }
 }

@@ -13,21 +13,17 @@ using System.Management;
 
 namespace ScottishGlen
 {
-    public partial class softwareDeleteForm : Form
+    public partial class linkViewForm : Form
     {
-        public softwareDeleteForm()
+        public linkViewForm()
         {
             InitializeComponent();
             dbConnect();
         }
 
-        private void softwareDeleteForm_Load(object sender, EventArgs e)
-        {
-        }
-
         void dbConnect() // function to connection to the database and display all records
         {
-            deleteList.Items.Clear(); // clears the list so new data is shown without old data repeating itself
+            displayLinks.Items.Clear(); // clears the list so new data is shown without old data repeating itself
 
             string connetionString; // initialise connectionString to be valued with the details further down
             SqlConnection cnn; // establish sql connection
@@ -39,26 +35,31 @@ namespace ScottishGlen
             SqlDataReader dataReader;
             String sql, Output = ""; // initialise the sql and output strings
 
-            sql = "SELECT * FROM software"; // sql statement to get all the records from the assets database
+            sql = "SELECT * FROM link"; // sql statement to get all the records from the assets database
             command = new SqlCommand(sql, cnn);
             dataReader = command.ExecuteReader();
 
             while (dataReader.Read()) // while loop to loop through records in the database
             {
                 // add each field from current record to output string
-                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + "\n";
-                deleteList.Items.Add(Output); // add current Output to the list box to display
+                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + "\n";
+                displayLinks.Items.Add(Output); // add current Output to the list box to display
                 Output = ""; // clear Output so old Output isn't displayed again
             } // while loop
 
             cnn.Close(); // close connection
         } // dbConnect()
 
+        private void linkViewForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            if (deleteList.SelectedIndex >= 0)
+            if (displayLinks.SelectedIndex >= 0)
             {
-                string current = deleteList.SelectedItem.ToString(); // turns the current selected item into a string
+                string current = displayLinks.SelectedItem.ToString(); // turns the current selected item into a string
                 string[] currentID = current.Split(' '); // splits the string up to individual items in an array with [0] being the ID
 
                 string connetionString;
@@ -72,7 +73,7 @@ namespace ScottishGlen
                 String sql = "";
 
                 // inserting all the values from the text box to the database in an sql statement
-                sql = "DELETE FROM software WHERE id = " + currentID[0];
+                sql = "DELETE FROM link WHERE id = " + currentID[0];
 
                 command = new SqlCommand(sql, cnn); // initialise the sql command
 
@@ -86,8 +87,19 @@ namespace ScottishGlen
             }
             else
             {
-                MessageBox.Show("Please select an item to remove.");
+                MessageBox.Show("Please select a link to remove.");
             }
+        }
+
+        private void goToAddLink_Click(object sender, EventArgs e)
+        {
+            linkAddForm linkAddForm = new linkAddForm();
+            linkAddForm.Show();
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            dbConnect();
         }
     }
 }

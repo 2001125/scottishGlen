@@ -132,6 +132,7 @@ namespace ScottishGlen
             this.Controls.Add(this.osBox);
             this.Name = "softwareAddForm";
             this.Text = "Add";
+            this.Load += new System.EventHandler(this.softwareAddForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
