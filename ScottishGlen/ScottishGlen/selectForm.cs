@@ -25,8 +25,8 @@ namespace ScottishGlen
 
         private void softwareButton_Click(object sender, EventArgs e)
         {
-            softwareForm softwareForm = new softwareForm();
-            softwareForm.Show();
+            softwareForm hardwareForm = new softwareForm();
+            hardwareForm.Show();
         }
 
         private void exitButton_Click(object sender, EventArgs e)

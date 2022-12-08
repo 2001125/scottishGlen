@@ -14,22 +14,17 @@ using System.Text.RegularExpressions;
 
 namespace ScottishGlen
 {
-    public partial class hardwareEditForm : Form
+    public partial class softwareEditForm : Form
     {
-        public hardwareEditForm()
+        public softwareEditForm()
         {
             InitializeComponent();
-            dbConnect();    
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            dbConnect();
         }
 
         void dbConnect() // function to connection to the database and display all records
         {
-            displayAssets.Items.Clear(); // clears the list so new data is shown without old data repeating itself
+            displaySoftware.Items.Clear(); // clears the list so new data is shown without old data repeating itself
 
             string connetionString; // initialise connectionString to be valued with the details further down
             SqlConnection cnn; // establish sql connection
@@ -41,15 +36,15 @@ namespace ScottishGlen
             SqlDataReader dataReader;
             String sql, Output = ""; // initialise the sql and output strings
 
-            sql = "SELECT * FROM assets"; // sql statement to get all the records from the assets database
+            sql = "SELECT * FROM software"; // sql statement to get all the records from the assets database
             command = new SqlCommand(sql, cnn);
             dataReader = command.ExecuteReader();
 
             while (dataReader.Read()) // while loop to loop through records in the database
             {
                 // add each field from current record to output string
-                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + " - " + dataReader.GetValue(4) + " - " + dataReader.GetValue(5) + " - " + dataReader.GetValue(6) + " - " + dataReader.GetValue(7) + "\n";
-                displayAssets.Items.Add(Output); // add current Output to the list box to display
+                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + "\n";
+                displaySoftware.Items.Add(Output); // add current Output to the list box to display
                 Output = ""; // clear Output so old Output isn't displayed again
             } // while loop
 
@@ -58,9 +53,35 @@ namespace ScottishGlen
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            if (displayAssets.SelectedIndex >= 0)
+            
+        }
+
+        private void displaySoftware_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string current = displaySoftware.SelectedItem.ToString(); // turns the current selected item into a string
+            string trim = Regex.Replace(current, @" - ", "-"); //  removes spaces between - 
+            string[] currentID = trim.Split('-'); // splits the string up to individual items in an array with [0] being the ID
+
+            clearBoxes();
+
+            // assigns all text boxes to the current selected item in the listbox
+            osBox.Text = currentID[1];
+            versionBox.Text = currentID[2];
+            manufacturerBox.Text = currentID[3];
+        }
+
+        private void clearBoxes()
+        {
+            osBox.Clear();
+            versionBox.Clear();
+            manufacturerBox.Clear();
+        }
+
+        private void editButton_Click_1(object sender, EventArgs e)
+        {
+            if (displaySoftware.SelectedIndex >= 0)
             {
-                string current = displayAssets.SelectedItem.ToString(); // turns the current selected item into a string
+                string current = displaySoftware.SelectedItem.ToString(); // turns the current selected item into a string
                 string[] currentID = current.Split('-'); // splits the string up to individual items in an array with [0] being the ID
 
                 string connetionString; // initialise connectionString to be valued with the details further down
@@ -73,7 +94,7 @@ namespace ScottishGlen
                 SqlDataReader dataReader;
                 String sql; // initialise the sql string
 
-                sql = "UPDATE assets SET systName = '" + sysNameBox.Text + "', model = '" + modelBox.Text + "', manufacturer = '" + manufacturerBox.Text + "', sysType = '" + sysTypeBox.Text + "', ipAdd = '" + ipBox.Text + "', purchDate = '" + dateBox.Text + "', notes = '" + notesBox.Text + "' WHERE id = " + currentID[0]; // sql statement to get all the records from the assets database
+                sql = "UPDATE software SET os = '" + osBox.Text + "', osVersion = '" + versionBox.Text + "', manufacturer = '" + manufacturerBox.Text + "' WHERE id = " + currentID[0]; // sql statement to get all the records from the assets database
                 //sql = "UPDATE assets SET systName = '" + sysNameBox.Text + "', model = '" + modelBox.Text + "' WHERE id = " + currentID[0] + ";";
                 command = new SqlCommand(sql, cnn);
                 dataReader = command.ExecuteReader();
@@ -85,35 +106,6 @@ namespace ScottishGlen
 
             dbConnect(); // refreshes the listbox
             clearBoxes();
-        }
-
-        private void displayAssets_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string current = displayAssets.SelectedItem.ToString(); // turns the current selected item into a string
-            string trim = Regex.Replace(current, @" - ", "-"); //  removes spaces between - 
-            string[] currentID = trim.Split('-'); // splits the string up to individual items in an array with [0] being the ID
-
-            clearBoxes();
-
-            // assigns all text boxes to the current selected item in the listbox
-            sysNameBox.Text = currentID[1];
-            modelBox.Text = currentID[2];
-            manufacturerBox.Text = currentID[3];
-            sysTypeBox.Text = currentID[4];
-            ipBox.Text = currentID[5];
-            dateBox.Text = currentID[6];
-            notesBox.Text = currentID[7];
-        }
-
-        private void clearBoxes()
-        {
-            sysNameBox.Clear();
-            modelBox.Clear();
-            manufacturerBox.Clear();
-            sysTypeBox.Clear();
-            ipBox.Clear();
-            dateBox.Clear();
-            notesBox.Clear();
         }
     }
 }

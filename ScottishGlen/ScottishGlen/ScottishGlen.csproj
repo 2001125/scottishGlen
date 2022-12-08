@@ -63,6 +63,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="softwareViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="softwareViewForm.Designer.cs">
+      <DependentUpon>softwareViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="softwareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="softwareForm.Designer.cs">
+      <DependentUpon>softwareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="softwareDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="softwareDeleteForm.Designer.cs">
+      <DependentUpon>softwareDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="softwareEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="softwareEditForm.Designer.cs">
+      <DependentUpon>softwareEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="softwareAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="softwareAddForm.Designer.cs">
+      <DependentUpon>softwareAddForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="hardwareAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,12 +111,6 @@
     </Compile>
     <Compile Include="hardwareDeleteForm.Designer.cs">
       <DependentUpon>hardwareDeleteForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="softwareForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="softwareForm.Designer.cs">
-      <DependentUpon>softwareForm.cs</DependentUpon>
     </Compile>
     <Compile Include="selectForm.cs">
       <SubType>Form</SubType>
@@ -126,6 +150,15 @@
     <EmbeddedResource Include="softwareForm.resx">
       <DependentUpon>softwareForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="softwareAddForm.resx">
+      <DependentUpon>softwareAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="softwareDeleteForm.resx">
+      <DependentUpon>softwareDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="softwareEditForm.resx">
+      <DependentUpon>softwareEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +180,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="softwareViewForm.resx">
+      <DependentUpon>softwareViewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
