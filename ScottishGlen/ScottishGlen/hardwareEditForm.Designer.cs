@@ -49,6 +49,7 @@ namespace ScottishGlen
             // 
             // displayAssets
             // 
+            this.displayAssets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.displayAssets.FormattingEnabled = true;
             this.displayAssets.Location = new System.Drawing.Point(271, 32);
             this.displayAssets.Name = "displayAssets";
@@ -67,6 +68,7 @@ namespace ScottishGlen
             // 
             // sysNameBox
             // 
+            this.sysNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.sysNameBox.Location = new System.Drawing.Point(68, 49);
             this.sysNameBox.Name = "sysNameBox";
             this.sysNameBox.Size = new System.Drawing.Size(100, 20);
@@ -83,6 +85,7 @@ namespace ScottishGlen
             // 
             // modelBox
             // 
+            this.modelBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.modelBox.Location = new System.Drawing.Point(68, 88);
             this.modelBox.Name = "modelBox";
             this.modelBox.Size = new System.Drawing.Size(100, 20);
@@ -99,6 +102,7 @@ namespace ScottishGlen
             // 
             // manufacturerBox
             // 
+            this.manufacturerBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.manufacturerBox.Location = new System.Drawing.Point(68, 127);
             this.manufacturerBox.Name = "manufacturerBox";
             this.manufacturerBox.Size = new System.Drawing.Size(100, 20);
@@ -115,6 +119,7 @@ namespace ScottishGlen
             // 
             // sysTypeBox
             // 
+            this.sysTypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.sysTypeBox.Location = new System.Drawing.Point(68, 167);
             this.sysTypeBox.Name = "sysTypeBox";
             this.sysTypeBox.Size = new System.Drawing.Size(100, 20);
@@ -131,6 +136,7 @@ namespace ScottishGlen
             // 
             // ipBox
             // 
+            this.ipBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.ipBox.Location = new System.Drawing.Point(68, 206);
             this.ipBox.Name = "ipBox";
             this.ipBox.Size = new System.Drawing.Size(100, 20);
@@ -147,6 +153,7 @@ namespace ScottishGlen
             // 
             // dateBox
             // 
+            this.dateBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.dateBox.Location = new System.Drawing.Point(68, 246);
             this.dateBox.Name = "dateBox";
             this.dateBox.Size = new System.Drawing.Size(100, 20);
@@ -163,6 +170,7 @@ namespace ScottishGlen
             // 
             // notesBox
             // 
+            this.notesBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.notesBox.Location = new System.Drawing.Point(68, 285);
             this.notesBox.Name = "notesBox";
             this.notesBox.Size = new System.Drawing.Size(100, 20);
@@ -170,18 +178,20 @@ namespace ScottishGlen
             // 
             // editButton
             // 
+            this.editButton.BackColor = System.Drawing.Color.OliveDrab;
             this.editButton.Location = new System.Drawing.Point(68, 329);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(100, 33);
             this.editButton.TabIndex = 15;
             this.editButton.Text = "Confirm Edit";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // hardwareEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.notesBox);

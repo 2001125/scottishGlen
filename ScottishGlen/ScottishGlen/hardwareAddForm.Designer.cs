@@ -52,6 +52,7 @@ namespace ScottishGlen
             // 
             // nameBox
             // 
+            this.nameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.nameBox.Location = new System.Drawing.Point(62, 47);
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(100, 20);
@@ -59,6 +60,7 @@ namespace ScottishGlen
             // 
             // modelBox
             // 
+            this.modelBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.modelBox.Location = new System.Drawing.Point(62, 86);
             this.modelBox.Name = "modelBox";
             this.modelBox.Size = new System.Drawing.Size(100, 20);
@@ -66,6 +68,7 @@ namespace ScottishGlen
             // 
             // manufacturerBox
             // 
+            this.manufacturerBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.manufacturerBox.Location = new System.Drawing.Point(62, 125);
             this.manufacturerBox.Name = "manufacturerBox";
             this.manufacturerBox.Size = new System.Drawing.Size(100, 20);
@@ -73,6 +76,7 @@ namespace ScottishGlen
             // 
             // typeBox
             // 
+            this.typeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.typeBox.Location = new System.Drawing.Point(62, 164);
             this.typeBox.Name = "typeBox";
             this.typeBox.Size = new System.Drawing.Size(100, 20);
@@ -80,6 +84,7 @@ namespace ScottishGlen
             // 
             // ipBox
             // 
+            this.ipBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.ipBox.Location = new System.Drawing.Point(62, 203);
             this.ipBox.Name = "ipBox";
             this.ipBox.Size = new System.Drawing.Size(100, 20);
@@ -87,6 +92,7 @@ namespace ScottishGlen
             // 
             // purchDateBox
             // 
+            this.purchDateBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.purchDateBox.Location = new System.Drawing.Point(62, 242);
             this.purchDateBox.Name = "purchDateBox";
             this.purchDateBox.Size = new System.Drawing.Size(100, 20);
@@ -94,6 +100,7 @@ namespace ScottishGlen
             // 
             // noteBox
             // 
+            this.noteBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.noteBox.Location = new System.Drawing.Point(62, 281);
             this.noteBox.Name = "noteBox";
             this.noteBox.Size = new System.Drawing.Size(100, 20);
@@ -101,20 +108,25 @@ namespace ScottishGlen
             // 
             // addDataButton
             // 
+            this.addDataButton.BackColor = System.Drawing.Color.OliveDrab;
             this.addDataButton.Location = new System.Drawing.Point(63, 316);
             this.addDataButton.Name = "addDataButton";
             this.addDataButton.Size = new System.Drawing.Size(99, 31);
             this.addDataButton.TabIndex = 8;
             this.addDataButton.Text = "Submit";
-            this.addDataButton.UseVisualStyleBackColor = true;
+            this.addDataButton.UseVisualStyleBackColor = false;
             this.addDataButton.Click += new System.EventHandler(this.addDataButton_Click);
             // 
             // displayListData
             // 
+            this.displayListData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
+            this.displayListData.Cursor = System.Windows.Forms.Cursors.Default;
+            this.displayListData.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayListData.FormattingEnabled = true;
-            this.displayListData.Location = new System.Drawing.Point(270, 31);
+            this.displayListData.HorizontalScrollbar = true;
+            this.displayListData.Location = new System.Drawing.Point(194, 31);
             this.displayListData.Name = "displayListData";
-            this.displayListData.Size = new System.Drawing.Size(506, 381);
+            this.displayListData.Size = new System.Drawing.Size(582, 381);
             this.displayListData.TabIndex = 9;
             this.displayListData.SelectedIndexChanged += new System.EventHandler(this.displayListData_SelectedIndexChanged);
             // 
@@ -183,16 +195,18 @@ namespace ScottishGlen
             // 
             // scanSys
             // 
+            this.scanSys.BackColor = System.Drawing.Color.OliveDrab;
             this.scanSys.Location = new System.Drawing.Point(63, 407);
             this.scanSys.Name = "scanSys";
             this.scanSys.Size = new System.Drawing.Size(99, 31);
             this.scanSys.TabIndex = 17;
             this.scanSys.Text = "Scan System";
-            this.scanSys.UseVisualStyleBackColor = true;
+            this.scanSys.UseVisualStyleBackColor = false;
             this.scanSys.Click += new System.EventHandler(this.scanSys_Click);
             // 
             // currentSysName
             // 
+            this.currentSysName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.currentSysName.Location = new System.Drawing.Point(62, 381);
             this.currentSysName.Name = "currentSysName";
             this.currentSysName.Size = new System.Drawing.Size(100, 20);
@@ -211,6 +225,7 @@ namespace ScottishGlen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.currentName);
             this.Controls.Add(this.currentSysName);

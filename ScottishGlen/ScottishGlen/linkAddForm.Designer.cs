@@ -38,6 +38,7 @@ namespace ScottishGlen
             // 
             // displayHardware
             // 
+            this.displayHardware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.displayHardware.FormattingEnabled = true;
             this.displayHardware.Location = new System.Drawing.Point(12, 25);
             this.displayHardware.Name = "displayHardware";
@@ -46,6 +47,7 @@ namespace ScottishGlen
             // 
             // displaySoftware
             // 
+            this.displaySoftware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.displaySoftware.FormattingEnabled = true;
             this.displaySoftware.Location = new System.Drawing.Point(404, 25);
             this.displaySoftware.Name = "displaySoftware";
@@ -72,18 +74,20 @@ namespace ScottishGlen
             // 
             // addLinkButton
             // 
+            this.addLinkButton.BackColor = System.Drawing.Color.OliveDrab;
             this.addLinkButton.Location = new System.Drawing.Point(315, 373);
             this.addLinkButton.Name = "addLinkButton";
             this.addLinkButton.Size = new System.Drawing.Size(173, 65);
             this.addLinkButton.TabIndex = 33;
             this.addLinkButton.Text = "Add Link";
-            this.addLinkButton.UseVisualStyleBackColor = true;
+            this.addLinkButton.UseVisualStyleBackColor = false;
             this.addLinkButton.Click += new System.EventHandler(this.addLinkButton_Click);
             // 
             // linkAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.addLinkButton);
             this.Controls.Add(this.softwareLabel);

@@ -37,6 +37,7 @@ namespace ScottishGlen
             // 
             // displayLinks
             // 
+            this.displayLinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.displayLinks.FormattingEnabled = true;
             this.displayLinks.Location = new System.Drawing.Point(140, 12);
             this.displayLinks.Name = "displayLinks";
@@ -45,38 +46,42 @@ namespace ScottishGlen
             // 
             // deleteButton
             // 
+            this.deleteButton.BackColor = System.Drawing.Color.OliveDrab;
             this.deleteButton.Location = new System.Drawing.Point(482, 360);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(162, 54);
             this.deleteButton.TabIndex = 18;
             this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // goToAddLink
             // 
+            this.goToAddLink.BackColor = System.Drawing.Color.OliveDrab;
             this.goToAddLink.Location = new System.Drawing.Point(140, 359);
             this.goToAddLink.Name = "goToAddLink";
             this.goToAddLink.Size = new System.Drawing.Size(165, 55);
             this.goToAddLink.TabIndex = 19;
             this.goToAddLink.Text = "Add Link";
-            this.goToAddLink.UseVisualStyleBackColor = true;
+            this.goToAddLink.UseVisualStyleBackColor = false;
             this.goToAddLink.Click += new System.EventHandler(this.goToAddLink_Click);
             // 
             // Refresh
             // 
+            this.Refresh.BackColor = System.Drawing.Color.OliveDrab;
             this.Refresh.Location = new System.Drawing.Point(311, 360);
             this.Refresh.Name = "Refresh";
             this.Refresh.Size = new System.Drawing.Size(165, 54);
             this.Refresh.TabIndex = 20;
             this.Refresh.Text = "Refresh";
-            this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.UseVisualStyleBackColor = false;
             this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
             // linkViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Refresh);
             this.Controls.Add(this.goToAddLink);

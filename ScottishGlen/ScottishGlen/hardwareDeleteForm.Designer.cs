@@ -35,6 +35,7 @@ namespace ScottishGlen
             // 
             // deleteList
             // 
+            this.deleteList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.deleteList.FormattingEnabled = true;
             this.deleteList.Location = new System.Drawing.Point(65, 40);
             this.deleteList.Name = "deleteList";
@@ -43,18 +44,20 @@ namespace ScottishGlen
             // 
             // deleteButton
             // 
+            this.deleteButton.BackColor = System.Drawing.Color.OliveDrab;
             this.deleteButton.Location = new System.Drawing.Point(335, 349);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(133, 56);
             this.deleteButton.TabIndex = 1;
             this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // hardwareDeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.deleteList);

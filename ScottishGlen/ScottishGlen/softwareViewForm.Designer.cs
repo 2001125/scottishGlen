@@ -35,7 +35,14 @@ namespace ScottishGlen
             // 
             // viewSoftwareGrid
             // 
+            this.viewSoftwareGrid.AllowUserToAddRows = false;
+            this.viewSoftwareGrid.AllowUserToDeleteRows = false;
+            this.viewSoftwareGrid.AllowUserToResizeColumns = false;
+            this.viewSoftwareGrid.AllowUserToResizeRows = false;
+            this.viewSoftwareGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.viewSoftwareGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.viewSoftwareGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.viewSoftwareGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.viewSoftwareGrid.Location = new System.Drawing.Point(100, 48);
             this.viewSoftwareGrid.Name = "viewSoftwareGrid";
             this.viewSoftwareGrid.Size = new System.Drawing.Size(575, 356);
@@ -45,6 +52,7 @@ namespace ScottishGlen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.viewSoftwareGrid);
             this.Name = "softwareViewForm";

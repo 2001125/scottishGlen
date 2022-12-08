@@ -69,6 +69,7 @@ namespace ScottishGlen
             // 
             // usernameTextBox
             // 
+            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.usernameTextBox.Location = new System.Drawing.Point(89, 53);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(171, 20);
@@ -76,6 +77,7 @@ namespace ScottishGlen
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.passwordTextBox.Location = new System.Drawing.Point(89, 89);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(171, 20);
@@ -83,22 +85,24 @@ namespace ScottishGlen
             // 
             // submitButton
             // 
+            this.submitButton.BackColor = System.Drawing.Color.OliveDrab;
             this.submitButton.Location = new System.Drawing.Point(89, 171);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 5;
             this.submitButton.Text = "Submit";
-            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.UseVisualStyleBackColor = false;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // exitButton
             // 
+            this.exitButton.BackColor = System.Drawing.Color.OliveDrab;
             this.exitButton.Location = new System.Drawing.Point(185, 171);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 6;
             this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // incorrectDetailsLabel
@@ -129,6 +133,7 @@ namespace ScottishGlen
             this.AcceptButton = this.submitButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(288, 227);
             this.Controls.Add(this.showPasswordCheck);
             this.Controls.Add(this.incorrectDetailsLabel);

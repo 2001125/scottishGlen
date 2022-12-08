@@ -60,48 +60,53 @@ namespace ScottishGlen
             // 
             // toView
             // 
+            this.toView.BackColor = System.Drawing.Color.OliveDrab;
             this.toView.Location = new System.Drawing.Point(440, 197);
             this.toView.Name = "toView";
             this.toView.Size = new System.Drawing.Size(152, 44);
             this.toView.TabIndex = 8;
             this.toView.Text = "View";
-            this.toView.UseVisualStyleBackColor = true;
+            this.toView.UseVisualStyleBackColor = false;
             this.toView.Click += new System.EventHandler(this.toView_Click);
             // 
             // toAdd
             // 
+            this.toAdd.BackColor = System.Drawing.Color.OliveDrab;
             this.toAdd.Location = new System.Drawing.Point(203, 197);
             this.toAdd.Name = "toAdd";
             this.toAdd.Size = new System.Drawing.Size(152, 44);
             this.toAdd.TabIndex = 9;
             this.toAdd.Text = "Add";
-            this.toAdd.UseVisualStyleBackColor = true;
+            this.toAdd.UseVisualStyleBackColor = false;
             this.toAdd.Click += new System.EventHandler(this.toAdd_Click);
             // 
             // toEdit
             // 
+            this.toEdit.BackColor = System.Drawing.Color.OliveDrab;
             this.toEdit.Location = new System.Drawing.Point(203, 289);
             this.toEdit.Name = "toEdit";
             this.toEdit.Size = new System.Drawing.Size(152, 44);
             this.toEdit.TabIndex = 10;
             this.toEdit.Text = "Edit";
-            this.toEdit.UseVisualStyleBackColor = true;
+            this.toEdit.UseVisualStyleBackColor = false;
             this.toEdit.Click += new System.EventHandler(this.toEdit_Click);
             // 
             // toDelete
             // 
+            this.toDelete.BackColor = System.Drawing.Color.OliveDrab;
             this.toDelete.Location = new System.Drawing.Point(440, 289);
             this.toDelete.Name = "toDelete";
             this.toDelete.Size = new System.Drawing.Size(152, 44);
             this.toDelete.TabIndex = 11;
             this.toDelete.Text = "Delete";
-            this.toDelete.UseVisualStyleBackColor = true;
+            this.toDelete.UseVisualStyleBackColor = false;
             this.toDelete.Click += new System.EventHandler(this.toDelete_Click);
             // 
             // softwareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toDelete);
             this.Controls.Add(this.toEdit);

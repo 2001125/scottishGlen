@@ -42,12 +42,13 @@ namespace ScottishGlen
             // 
             // scanSys
             // 
-            this.scanSys.Location = new System.Drawing.Point(46, 224);
+            this.scanSys.BackColor = System.Drawing.Color.OliveDrab;
+            this.scanSys.Location = new System.Drawing.Point(45, 260);
             this.scanSys.Name = "scanSys";
             this.scanSys.Size = new System.Drawing.Size(99, 31);
             this.scanSys.TabIndex = 36;
             this.scanSys.Text = "Scan System";
-            this.scanSys.UseVisualStyleBackColor = true;
+            this.scanSys.UseVisualStyleBackColor = false;
             this.scanSys.Click += new System.EventHandler(this.scanSys_Click);
             // 
             // versionLabel
@@ -70,6 +71,7 @@ namespace ScottishGlen
             // 
             // displayListData
             // 
+            this.displayListData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.displayListData.FormattingEnabled = true;
             this.displayListData.Location = new System.Drawing.Point(253, 22);
             this.displayListData.Name = "displayListData";
@@ -78,16 +80,18 @@ namespace ScottishGlen
             // 
             // addDataButton
             // 
+            this.addDataButton.BackColor = System.Drawing.Color.OliveDrab;
             this.addDataButton.Location = new System.Drawing.Point(46, 157);
             this.addDataButton.Name = "addDataButton";
             this.addDataButton.Size = new System.Drawing.Size(99, 31);
             this.addDataButton.TabIndex = 27;
             this.addDataButton.Text = "Submit";
-            this.addDataButton.UseVisualStyleBackColor = true;
+            this.addDataButton.UseVisualStyleBackColor = false;
             this.addDataButton.Click += new System.EventHandler(this.addDataButton_Click);
             // 
             // versionBox
             // 
+            this.versionBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.versionBox.Location = new System.Drawing.Point(45, 77);
             this.versionBox.Name = "versionBox";
             this.versionBox.Size = new System.Drawing.Size(100, 20);
@@ -95,6 +99,7 @@ namespace ScottishGlen
             // 
             // osBox
             // 
+            this.osBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.osBox.Location = new System.Drawing.Point(45, 38);
             this.osBox.Name = "osBox";
             this.osBox.Size = new System.Drawing.Size(100, 20);
@@ -111,6 +116,7 @@ namespace ScottishGlen
             // 
             // manufacturerBox
             // 
+            this.manufacturerBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.manufacturerBox.Location = new System.Drawing.Point(45, 116);
             this.manufacturerBox.Name = "manufacturerBox";
             this.manufacturerBox.Size = new System.Drawing.Size(100, 20);
@@ -120,6 +126,7 @@ namespace ScottishGlen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.scanSys);
             this.Controls.Add(this.manufacturerLabel);

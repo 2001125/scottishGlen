@@ -41,16 +41,18 @@ namespace ScottishGlen
             // 
             // editButton
             // 
+            this.editButton.BackColor = System.Drawing.Color.OliveDrab;
             this.editButton.Location = new System.Drawing.Point(48, 224);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(100, 33);
             this.editButton.TabIndex = 23;
             this.editButton.Text = "Confirm Edit";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click_1);
             // 
             // manufacturerBox
             // 
+            this.manufacturerBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.manufacturerBox.Location = new System.Drawing.Point(48, 130);
             this.manufacturerBox.Name = "manufacturerBox";
             this.manufacturerBox.Size = new System.Drawing.Size(100, 20);
@@ -67,6 +69,7 @@ namespace ScottishGlen
             // 
             // versionBox
             // 
+            this.versionBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.versionBox.Location = new System.Drawing.Point(48, 91);
             this.versionBox.Name = "versionBox";
             this.versionBox.Size = new System.Drawing.Size(100, 20);
@@ -83,6 +86,7 @@ namespace ScottishGlen
             // 
             // osBox
             // 
+            this.osBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.osBox.Location = new System.Drawing.Point(48, 52);
             this.osBox.Name = "osBox";
             this.osBox.Size = new System.Drawing.Size(100, 20);
@@ -99,6 +103,7 @@ namespace ScottishGlen
             // 
             // displaySoftware
             // 
+            this.displaySoftware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(250)))), ((int)(((byte)(180)))));
             this.displaySoftware.FormattingEnabled = true;
             this.displaySoftware.Location = new System.Drawing.Point(251, 35);
             this.displaySoftware.Name = "displaySoftware";
@@ -110,6 +115,7 @@ namespace ScottishGlen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(250)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.manufacturerBox);
